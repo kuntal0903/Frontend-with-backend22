@@ -1,0 +1,273 @@
+/* ================================================================
+   ASM SHIELD 3.0 — CYBERSECURITY DESIGN SYSTEM
+   Ultra-modern Glassmorphism & Cyber Neon Aesthetic
+   ================================================================ */
+
+:root,
+[data-theme="dark"] {
+  --bg-base:        #030712;
+  --bg-surface:     #0b1329;
+  --bg-raised:      #111c38;
+  --bg-card:        rgba(11, 19, 41, 0.75);
+  --bg-elevated:    #162347;
+  --bg-hover:       #1e2f5c;
+
+  --accent-blue:    #38bdf8;
+  --accent-cyan:    #00f2fe;
+  --accent-purple:  #a855f7;
+  --neon-blue:      #38bdf8;
+  --neon-cyan:      #00f2fe;
+  --neon-green:     #00e676;
+  --neon-pink:      #f43f5e;
+
+  --text-primary:   #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted:     #475569;
+  --text-accent:    #38bdf8;
+
+  --border:         rgba(56, 189, 248, 0.15);
+  --border-hover:   rgba(56, 189, 248, 0.4);
+  --border-active:  rgba(0, 242, 254, 0.8);
+  --grad-primary:   linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  --grad-critical:  linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+  --grad-purple:    linear-gradient(135deg, #7928ca 0%, #ff0080 100%);
+  --grad-emerald:   linear-gradient(135deg, #00e676 0%, #1de9b6 100%);
+
+  --glow-blue:      0 0 25px rgba(56, 189, 248, 0.25);
+  --glow-cyan:      0 0 25px rgba(0, 242, 254, 0.25);
+  --glow-critical:  0 0 25px rgba(255, 8, 68, 0.35);
+  --glow-purple:    0 0 25px rgba(168, 85, 247, 0.3);
+}
+
+[data-theme="light"] {
+  --bg-base:        #f8fafc;
+  --bg-surface:     #ffffff;
+  --bg-raised:      #f1f5f9;
+  --bg-card:        rgba(255, 255, 255, 0.9);
+  --bg-elevated:    #e2e8f0;
+  --bg-hover:       #cbd5e1;
+
+  --accent-blue:    #0284c7;
+  --accent-cyan:    #0369a1;
+  --accent-purple:  #7c3aed;
+  --neon-blue:      #0284c7;
+  --neon-cyan:      #0369a1;
+  --neon-green:     #16a34a;
+  --neon-pink:      #e11d48;
+
+  --text-primary:   #0f172a;
+  --text-secondary: #334155;
+  --text-muted:     #64748b;
+  --text-accent:    #0284c7;
+
+  --border:         rgba(15, 23, 42, 0.12);
+  --border-hover:   rgba(2, 132, 199, 0.4);
+  --border-active:  rgba(2, 132, 199, 0.8);
+  --grad-primary:   linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  --grad-critical:  linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+  --grad-purple:    linear-gradient(135deg, #7c3aed 0%, #c084fc 100%);
+  --grad-emerald:   linear-gradient(135deg, #16a34a 0%, #34d399 100%);
+  --glow-blue:      0 0 16px rgba(2, 132, 199, 0.15);
+  --glow-cyan:      0 0 16px rgba(3, 105, 161, 0.15);
+  --glow-critical:  0 0 16px rgba(220, 38, 38, 0.15);
+  --glow-purple:    0 0 16px rgba(124, 58, 237, 0.15);
+}
+
+[data-theme="blue"] {
+  --bg-base:        #020617;
+  --bg-surface:     #0a122e;
+  --bg-raised:      #0f1c47;
+  --bg-card:        rgba(10, 18, 46, 0.8);
+  --bg-elevated:    #162861;
+  --bg-hover:       #1e357d;
+
+  --accent-blue:    #38bdf8;
+  --accent-cyan:    #00f2fe;
+  --accent-purple:  #c084fc;
+  --neon-blue:      #38bdf8;
+  --neon-cyan:      #00f2fe;
+  --neon-green:     #4ade80;
+  --neon-pink:      #fb7185;
+
+  --text-primary:   #f0f9ff;
+  --text-secondary: #7dd3fc;
+  --text-muted:     #38bdf8;
+  --text-accent:    #00f2fe;
+
+  --border:         rgba(56, 189, 248, 0.2);
+  --border-hover:   rgba(0, 242, 254, 0.5);
+  --border-active:  rgba(0, 242, 254, 0.9);
+  --grad-primary:   linear-gradient(135deg, #00f2fe 0%, #38bdf8 100%);
+  --grad-critical:  linear-gradient(135deg, #f43f5e 0%, #fb923c 100%);
+  --grad-purple:    linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  --grad-emerald:   linear-gradient(135deg, #22c55e 0%, #14b8a6 100%);
+  --glow-blue:      0 0 25px rgba(56, 189, 248, 0.35);
+  --glow-cyan:      0 0 25px rgba(0, 242, 254, 0.35);
+  --glow-critical:  0 0 25px rgba(244, 63, 94, 0.4);
+  --glow-purple:    0 0 25px rgba(168, 85, 247, 0.35);
+}
+
+:root {
+  --critical:       #ff0844;
+  --high:           #f97316;
+  --medium:         #eab308;
+  --low:            #00e676;
+  --info:           #38bdf8;
+
+  --sidebar-width:  250px;
+  --sidebar-width-collapsed: 72px;
+
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  24px;
+
+  --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-base);
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(56, 189, 248, 0.05) 0px, transparent 50%),
+    radial-gradient(at 90% 90%, rgba(0, 242, 254, 0.04) 0px, transparent 50%);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.25); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+::selection { background: rgba(0, 242, 254, 0.3); color: #ffffff; }
+
+input, select, textarea, button {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-primary);
+}
+
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(0, 242, 254, 0.5); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(35px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.35s ease-out forwards; }
+
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-hover);
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.clickable-row:hover {
+  background-color: var(--bg-hover) !important;
+  transform: translateX(3px);
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast-item {
+  pointer-events: auto;
+  min-width: 290px;
+  max-width: 440px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), var(--glow-blue);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  backdrop-filter: blur(16px);
+}
+
+.toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.toast-success { border-color: rgba(0, 230, 118, 0.5); }
+.toast-success .toast-icon { background: rgba(0, 230, 118, 0.2); color: var(--neon-green); }
+
+.toast-info { border-color: rgba(56, 189, 248, 0.5); }
+.toast-info .toast-icon { background: rgba(56, 189, 248, 0.2); color: var(--neon-blue); }
+
+.toast-warning { border-color: rgba(234, 179, 8, 0.5); }
+.toast-warning .toast-icon { background: rgba(234, 179, 8, 0.2); color: var(--medium); }
+
+.toast-error { border-color: rgba(255, 8, 68, 0.5); }
+.toast-error .toast-icon { background: rgba(255, 8, 68, 0.2); color: var(--critical); }
+
+.toast-message { font-size: 14px; font-weight: 500; flex: 1; }
+
+.toast-close {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.toast-close:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.1); }

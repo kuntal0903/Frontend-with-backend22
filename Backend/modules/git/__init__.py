@@ -1,0 +1,3 @@
+"""
+Git module initialization
+"""
